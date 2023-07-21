@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".InsertOrModifyFile">
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <LinearLayout
+            android:id="@+id/llImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/mainEditId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_green" />
+
+            <EditText
+                android:id="@+id/mainEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:hint=" এখানে লিখুন বা লেখা পেস্ট করুন "
+                android:minHeight="200dp"
+                android:textColor="@color/dark_green" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/btnAddDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/ic_calendar"
+                    android:text="তারিখ যোগ করুন" />
+
+                <Button
+                    android:id="@+id/btnAddTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/ic_time"
+                    android:text="সময় যোগ করুন" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Button
+
+                    android:id="@+id/btnAddPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/ic_photo_add"
+                    android:text="ছবি যোগ করুন" />
+
+                <Button
+                    android:id="@+id/btnDeletePhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/tick_mark"
+                    android:text="ছবি ডিলিট করুন" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewUserImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/globe1" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+
+
+            <Button
+                android:id="@+id/btnSaveToFile"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="?attr/colorPrimaryDark"
+                android:text="Save "
+                android:textColor="@color/QuranKuran"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnUpdateData"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="?attr/colorPrimaryDark"
+                android:text="UPDATE"
+                android:textColor="@color/QuranKuran"
+                android:textStyle="italic" />
+
+            <Button
+
+                android:id="@+id/btnDeleteData"
+
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="?attr/colorPrimaryDark"
+
+                android:text="DELETE"
+                android:textColor="@color/QuranKuran"
+                android:textStyle="italic" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
