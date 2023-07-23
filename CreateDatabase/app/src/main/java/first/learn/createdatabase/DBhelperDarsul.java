@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBhelperDarsul extends SQLiteOpenHelper {
 
+    static final int DB_VERSION = 3;
 
 
     public  static final  String TABLE_STUDENT="Student_Table";
@@ -27,9 +28,6 @@ public class DBhelperDarsul extends SQLiteOpenHelper {
     public static final String MEMBER_ID = "_id";
     public static final String MEMBER_NAME = "name";
     public static final String MEMBER_PHOTO = "MEMBER_PHOTO";
-
-    static final int DB_VERSION = 3;
-
 
     // TABLE CREATION STATEMENT
     private static final String CREATE_TABLE = "create table "

@@ -225,6 +225,7 @@ public class InsertOrModifyFile extends AppCompatActivity {
                 if (dbcon.insertDataWithPhoto(getDateAndTime(DATE, TIME) + data , RECEIPT_PHOTO)) {
 
                     Toast.makeText(mContext, "Alhamdulillah, Saved Success.", Toast.LENGTH_SHORT).show();
+
                     try {
                         dbcon.close();
                     } catch (Exception e) {

@@ -165,8 +165,20 @@ public class MainActivity extends AppCompatActivity {
 
                             if(which == 2){
 
-                                new File(filePath).delete();
-                                makeFileListInListView();
+
+                                new AlertDialog.Builder(mContext).setTitle("Confirmation : ")
+                                        .setMessage("Sure Delete ")
+                                        .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                new File(filePath).delete();
+                                                makeFileListInListView();
+                                            }
+                                        })
+                                        .setNeutralButton("Cancel", null)
+                                        .create().show();
+
+
                             }
 
 
