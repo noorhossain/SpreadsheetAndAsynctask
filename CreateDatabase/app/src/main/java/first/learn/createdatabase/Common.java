@@ -274,7 +274,7 @@ public class Common {
 
                                 String thisDate;
                                 if (isShortDate) {
-                                    String yearString = String.valueOf(year);
+                                    String yearString = String.valueOf(year); //2023
                                     try {
                                         yearString = yearString.substring(2, 4);
                                     } catch (Exception e) {
@@ -294,7 +294,6 @@ public class Common {
 
 
                                 btnThisDate.setEnabled(true);
-
 
                                 btnThisDate.setAlpha(1f);
 
