@@ -194,20 +194,42 @@ public class Common {
 
     public static String getDateAndTime(String dateString, String timeString) {
         if (TextUtils.isEmpty(dateString)) {
-            SimpleDateFormat date = new SimpleDateFormat("dd.MM.yyyy-EEEE", Locale.US);
+            SimpleDateFormat date = new SimpleDateFormat("dd.MM.yy-EE", Locale.US);
             dateString = date.format(new Date());
         }
         if (TextUtils.isEmpty(timeString)) {
-            SimpleDateFormat time = new SimpleDateFormat("hh.mm a", Locale.US);
+            SimpleDateFormat time = new SimpleDateFormat("hh.mm-a", Locale.US);
             timeString = time.format(new Date());
         }
 
         String dateAndTime = "তারিখ: " + dateString + "-" + timeString + "\\n" + "\\n";
-        final String finalString = dateAndTime.replace("\\n", Objects.requireNonNull(System.getProperty("line.separator")))
-                .replaceAll("<.*?>", "");
+
+        final String finalString = dateAndTime
+                .replaceAll("<.*?>", "").replace("\\n", Objects.requireNonNull(System.getProperty("line.separator"))); //
 
         return finalString;
     }
+
+
+    public static String getDateTimeAndData(String dateString, String timeString, String data) {
+        if (TextUtils.isEmpty(dateString)) {
+            SimpleDateFormat date = new SimpleDateFormat("dd.MM.yy-EE", Locale.US);
+            dateString = date.format(new Date());
+        }
+        if (TextUtils.isEmpty(timeString)) {
+            SimpleDateFormat time = new SimpleDateFormat("hh.mm-a", Locale.US);
+            timeString = time.format(new Date());
+        }
+
+        String dateAndTime = "তারিখ: " + dateString + "-" + timeString + "\\n" + "\\n"+ data;
+
+        final String finalString = dateAndTime.replace("\\n", Objects.requireNonNull(System.getProperty("line.separator")))
+                .replaceAll("<.*?>", ""); //
+
+        return finalString;
+    }
+
+
 
 
     public static String currentDate;
@@ -347,6 +369,7 @@ public class Common {
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View view = inflater.inflate(R.layout.timepicker_header, null);
+
         final Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);

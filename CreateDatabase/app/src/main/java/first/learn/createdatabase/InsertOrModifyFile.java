@@ -4,6 +4,7 @@ import static first.learn.createdatabase.Common.CAMERA_PERMISSION_CODE;
 import static first.learn.createdatabase.Common.commonDir;
 import static first.learn.createdatabase.Common.datePicker;
 import static first.learn.createdatabase.Common.getDateAndTime;
+import static first.learn.createdatabase.Common.getDateTimeAndData;
 import static first.learn.createdatabase.Common.getResizedBitmap;
 import static first.learn.createdatabase.Common.imageViewToBitmap;
 import static first.learn.createdatabase.Common.resumingAfterModify;
@@ -224,7 +225,7 @@ public class InsertOrModifyFile extends AppCompatActivity {
 
                 String filePath = dbcon.getFilePath().toString();
 
-                if (dbcon.insertDataWithPhoto(getDateAndTime(DATE, TIME) + data , RECEIPT_PHOTO)) {
+                if (dbcon.insertDataWithPhoto(getDateTimeAndData(DATE, TIME,  data), RECEIPT_PHOTO)) {
 
                     Toast.makeText(mContext, "Alhamdulillah, Saved Success.", Toast.LENGTH_SHORT).show();
 
