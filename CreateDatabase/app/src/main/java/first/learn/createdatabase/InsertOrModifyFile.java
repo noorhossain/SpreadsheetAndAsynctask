@@ -229,6 +229,7 @@ public class InsertOrModifyFile extends AppCompatActivity {
 
                     Toast.makeText(mContext, "Alhamdulillah, Saved Success.", Toast.LENGTH_SHORT).show();
 
+
                     try {
                         dbcon.close();
                     } catch (Exception e) {
@@ -239,7 +240,7 @@ public class InsertOrModifyFile extends AppCompatActivity {
 
                     if(getIntent().getStringExtra("FromOpenedFile")!=null){
 
-                        resumingFromInsertData= true ;
+                        resumingFromInsertData = true ;
                         finish();
 
                     }else {
