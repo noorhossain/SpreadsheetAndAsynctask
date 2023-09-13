@@ -440,9 +440,10 @@ public class InsertOrModifyFile extends AppCompatActivity {
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
+
         File storageDir = new File(commonDir(), "Camera");
         if (!storageDir.exists()) {
-            storageDir.mkdir();
+            storageDir.mkdirs();
         }
         File image = File.createTempFile(imageFileName, /* prefix */ ".jpg", /* suffix */ storageDir /* directory */);
         image.deleteOnExit();
@@ -460,7 +461,6 @@ public class InsertOrModifyFile extends AppCompatActivity {
 
 
         if (resultCode == RESULT_OK && requestCode == CAMEARA_IMAGE_REQUEST) {
-
 
 
             rbitmap = getResizedBitmap(mContext, Uri.parse(cameraFilePath));
